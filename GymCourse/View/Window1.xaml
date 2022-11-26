@@ -1,0 +1,124 @@
+﻿<Window x:Class="GymCourse.View.Window1"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymCourse.View"
+        mc:Ignorable="d" WindowStyle="None" Background="Transparent"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Row="1" CornerRadius="0 0 0 7" Background="#282828" BorderThickness="0.3 0 0 0.3"
+                BorderBrush="AliceBlue" >
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                </StackPanel>
+
+            </Border>
+
+            <Border CornerRadius="7 0 0 0" Background="#1F1F1F" BorderThickness="0.3 0.3 0 0"
+                BorderBrush="AliceBlue">
+
+            </Border>
+
+            <Grid Grid.Column="1">
+                <Border CornerRadius="0 10 0 0" Background="#1F1F1F" BorderThickness="0.0 0.3 0.3 0 "
+                BorderBrush="AliceBlue"  >
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
+                            HorizontalAlignment="Right">
+                        <materialDesign:PackIcon Kind="WindowMinimize" Foreground="#ffffff" 
+                                             Opacity="0.6" Margin="0 0 5 0" x:Name="lllX" MouseDown="lllX_MouseDown" MouseEnter="lllX_MouseEnter" MouseLeave="lllX_MouseLeave"/>
+                        <materialDesign:PackIcon Kind="WindowClose" Foreground="#ffffff" x:Name="xxxL"
+                                             Opacity="0.6" Margin="0 0 10 0" MouseDown="PackIcon_MouseDown" MouseEnter="xxxL_MouseEnter" MouseLeave="xxxL_MouseLeave"/>
+
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Border CornerRadius="0 0 10 0" Background="#282828" BorderThickness="0 0.0 0.3 0.3"
+                BorderBrush="AliceBlue" Grid.Row="1">
+                    <StackPanel x:Name="WindowFrime" Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel HorizontalAlignment="Left" Margin="60 30 0 0">
+                                <Border Width="150" Height="150" Background="#FF373737"
+                                        CornerRadius="10">
+                                    <Image x:Name="imageAdd" Width="135" Height="135" RenderTransformOrigin="0.5,0.5">
+                                        <Image.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="-90.0"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </Image.RenderTransform>
+                                    </Image>
+                                </Border>
+                                <TextBlock Text="Добавить фото" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                           Foreground="#ffffff" Opacity="0.5" Margin="0 10 0 0" MouseDown="TextBlock_MouseDown"/>
+
+                                <StackPanel>
+                                    <TextBlock Text="" VerticalAlignment="Center"
+                                               HorizontalAlignment="Center" Foreground="#FF66E745"
+                                               x:Name="newsAddText" Margin="0 120 0 0" FontFamily="Arial Black" />
+                                    <Border Width="120" Background="#FFA6FFAA" CornerRadius="5" Height="25"
+                                            Margin="0 10 0 0" MouseDown="Border_MouseDown" ToolTip="Поделиться новостью с пользователями" >
+                                        <TextBlock Text="Опубликовать "  HorizontalAlignment="Right" 
+                                           Foreground="Black" Opacity="1" VerticalAlignment="Center" FontFamily="Tahoma" Margin="0,0,19,0" />
+                                    </Border>
+
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel  Margin="90 0 0 0" Height="68" VerticalAlignment="Top">
+                                <TextBlock Text="Заголовок" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                           Foreground="#ffffff" Opacity="0.5" Margin="0 10 0 5"/>
+                                <Border Width="300" Height="30" Background="#FF373737"
+                                        CornerRadius="7">
+                                    <TextBox Cursor="Arrow"  Style="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" x:Name="nametxt"
+                                             materialDesign:HintAssist.Hint="Громкая новость" BorderThickness="0" CaretBrush="#8D8D8D" SelectionBrush="#8D8D8D" 
+                                             SelectionTextBrush="#8D8D8D" FontFamily="Dubai Light" Width="280" Height="25"
+                                             VerticalAlignment="Center" Foreground="#ffffff"/>
+                                </Border>
+
+                            </StackPanel>
+
+                        </StackPanel>
+
+                        <StackPanel  Margin="160 -450 0 0" Height="183" Width="394">
+                            <TextBlock Text="Текст" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                           Foreground="#ffffff" Opacity="0.5" Margin="0 10 0 5"/>
+                            <Border Width="300" Height="131" Background="#FF373737"
+                                        CornerRadius="7">
+                                <TextBox Cursor="Arrow" x:Name="txt"
+                                             Style="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" 
+                                             materialDesign:HintAssist.Hint="Текст может быть длинной в xxx символов." BorderThickness="0" CaretBrush="#8D8D8D" SelectionBrush="#8D8D8D" 
+                                             SelectionTextBrush="#8D8D8D" FontFamily="Dubai Light" Width="280" Height="120"
+                                             VerticalAlignment="Center" Foreground="#ffffff" Margin="10,0,10,0" TextWrapping="Wrap"/>
+                            </Border>
+
+                        </StackPanel>
+                    </StackPanel>
+
+
+                </Border>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

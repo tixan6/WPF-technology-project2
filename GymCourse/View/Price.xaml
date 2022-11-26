@@ -1,0 +1,78 @@
+﻿<Page x:Class="GymCourse.View.Price"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GymCourse.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Price">
+
+    <Grid>
+        <materialDesign:Card Margin="5">
+            <StackPanel Background="#323232">
+                <Expander  HorizontalAlignment="Stretch"   Header="Абонемент «Продвинутый»" Background="#FF454545"
+                           Foreground="#FFFFFF" Opacity="0.6" FontFamily="Cooper Black">
+                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                        <TextBlock Text="Общее количество занятий: 6" Foreground="#FFFFFF"/>
+                        <TextBlock Text="Действителен: 1 месяц" Foreground="#FFFFFF"/>
+                        <TextBlock Text="Занятие с тренером: включено" Foreground="#FFFFFF"/>
+                        <TextBlock Text="Опыт работы: 4 года" Foreground="#FFFFFF"/>
+                        <Button Width="100" Height="25" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Background="#FFBE5D" Cursor="Hand" BorderBrush="#FFBE5D"
+                                Content="Купить" HorizontalAlignment="Left" Margin="0 10 0 0" Click="Button_Click" />
+    
+                    </StackPanel>
+                </Expander>
+                <Border  />
+                <Expander HorizontalAlignment="Stretch" Header="Абонемент «Мастер»" Background="#FF181818"
+                          Foreground="#FFFFFF" Opacity="0.6" FontFamily="Cooper Black">
+                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                        <TextBlock Text="Общее количество занятий: 8" Foreground="#FFFFFF"/>
+                        <TextBlock Text="Действителен: 2 месяца" Foreground="#FFFFFF"/>
+                        <TextBlock Text="Занятия с тренером: включено" Foreground="#FFFFFF"/>
+                        <TextBlock Text="Цена: 60 BYN" Foreground="#FFFFFF"/>
+                        <Button Width="100" Height="25" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Background="#FFBE5D" Cursor="Hand" BorderBrush="#FFBE5D"
+                                Content="Купить" HorizontalAlignment="Left" Margin="0 10 0 0" Click="Button_Click_1" />
+                    </StackPanel>
+                </Expander>
+                <Border  />
+                <Expander HorizontalAlignment="Stretch" Header="Абонемент «Безлимит»" Background="Black" Foreground="#FFFFFF" Opacity="0.6" FontFamily="Cooper Black">
+                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16" >
+                        <TextBlock Text="Общее количество занятий: неограниченно"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Действителен: 1 месяц "  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Без тренера"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Цена: 70 BYN"  Foreground="#FFFFFF"/>
+                        <Button Width="100" Height="25" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Background="#FFBE5D" Cursor="Hand" BorderBrush="#FFBE5D"
+                                Content="Купить" HorizontalAlignment="Left" Margin="0 10 0 0" Click="Button_Click_2" />
+                    </StackPanel>
+                </Expander>
+                <Expander HorizontalAlignment="Stretch" Header="Абонемент «Конь»" Background="Red" Foreground="#FFFFFF" Opacity="0.6" FontFamily="Cooper Black">
+                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                        <TextBlock Text="Общее количество занятий: неограниченно"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Действителен: 3 месяца"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Без тренера"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Цена: 140 BYN"  Foreground="#FFFFFF"/>
+                        <Button Width="100" Height="25" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Background="#FFBE5D" Cursor="Hand" BorderBrush="#FFBE5D"
+                                Content="Купить" HorizontalAlignment="Left" Margin="0 10 0 0" Click="Button_Click_3" />
+                    </StackPanel>
+                </Expander>
+                <Expander HorizontalAlignment="Stretch" Header="Абонемент «Удав»" Background="#FF000CFF" Foreground="#FFFFFF" Opacity="0.6" FontFamily="Cooper Black">
+                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                        <TextBlock Text="Общее количество занятий: неограниченно"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Действителен: год"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Без тренера"  Foreground="#FFFFFF"/>
+                        <TextBlock Text="Цена: 460 BYN"  Foreground="#FFFFFF"/>
+                        <Button Width="100" Height="25" Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                                Background="#FFBE5D" Cursor="Hand" BorderBrush="#FFBE5D"
+                                Content="Купить" HorizontalAlignment="Left" Margin="0 10 0 0" Click="Button_Click_4" />
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</Page>

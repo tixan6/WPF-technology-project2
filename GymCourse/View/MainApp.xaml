@@ -1,0 +1,131 @@
+﻿<Window x:Class="GymCourse.View.MainApp"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GymCourse.View"
+        mc:Ignorable="d" WindowStyle="None" Background="Transparent"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Title="MainApp" Height="450" Width="800" Activated="Window_Activated">
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <Border Grid.Row="1" CornerRadius="0 0 0 7" Background="#323232" BorderThickness="0.3 0 0 0.3"
+                BorderBrush="AliceBlue" >
+            <StackPanel Orientation="Vertical">
+
+                <Border Width="45" Height="45" CornerRadius="100" x:Name="AvatarSettd"
+                        Background="#FFFDC96A" Margin="0 10 0 0" MouseDown="Border_MouseDown_1">
+                    <StackPanel>
+                        
+                        <StackPanel>
+
+                        <Ellipse Width="45" Height="45">
+                            <Ellipse.Fill>
+
+                                    <ImageBrush x:Name="AvatarSett" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Width="45" Height="45" CornerRadius="10" BorderThickness="0"
+                        BorderBrush="AliceBlue" x:Name="AnimNews"
+                        Background="Transparent" Margin="0 50 0 0" MouseDown="AnimNews_MouseDown" MouseEnter="AnimNews_MouseEnter" MouseLeave="AnimNews_MouseLeave">
+                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="NewspaperVariant"
+                                             HorizontalAlignment="Center" Opacity="0.8"
+                                             Width="25" Height="25" x:Name="AnimNewsToo"
+                                             Foreground="#C4C4C4"/>
+                </Border>
+
+                <Border Width="45" Height="45" CornerRadius="10" BorderThickness="0"
+                        BorderBrush="AliceBlue" x:Name="AnimPrice"
+                        Background="Transparent" Margin="0 10 0 0" MouseEnter="AnimPrice_MouseEnter" MouseDown="AnimPrice_MouseDown" MouseLeave="AnimPrice_MouseLeave">
+                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="CurrencyUsd"
+                                             HorizontalAlignment="Center"
+                                             Width="25" Height="25" Opacity="0.8"
+                                             Foreground="#C4C4C4"/>
+                </Border>
+
+                <Border Width="45" Height="45" CornerRadius="10" BorderThickness="0"
+                        BorderBrush="AliceBlue" x:Name="AnimGym"
+                        Background="Transparent" Margin="0 10 0 0" MouseDown="AnimGym_MouseDown" MouseEnter="AnimGym_MouseEnter" MouseLeave="AnimGym_MouseLeave">
+                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="Dumbbell"
+                                             HorizontalAlignment="Center"
+                                             Width="25" Height="25" Opacity="0.8"
+                                             Foreground="#C4C4C4" />
+                </Border>
+
+                
+
+                <Border Width="45" Height="45" CornerRadius="10" BorderThickness="0"
+                        BorderBrush="AliceBlue" x:Name="Leave"
+                        Background="Transparent" Margin="0 110 0 0" MouseDown="Border_MouseDown" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
+                    <materialDesign:PackIcon VerticalAlignment="Center" Kind="Export"
+                                             HorizontalAlignment="Center" x:Name="xxx"
+                                             Width="25" Height="25" Opacity="0.6"
+                                             Foreground="#C4C4C4"/>
+                </Border>
+
+
+            </StackPanel>
+        </Border>
+        
+        <Border CornerRadius="7 0 0 0" Background="#1F1F1F" BorderThickness="0.3 0.3 0 0"
+                BorderBrush="AliceBlue">
+            
+        </Border> 
+        
+        <Grid Grid.Column="1">
+        <Border CornerRadius="0 10 0 0" Background="#1F1F1F" BorderThickness="0.0 0.3 0.3 0 "
+                BorderBrush="AliceBlue"  >
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
+                            HorizontalAlignment="Right">
+                    <materialDesign:PackIcon Kind="WindowMinimize" Foreground="#ffffff" x:Name="L"
+                                             Opacity="0.6" Margin="0 0 5 0" MouseDown="PackIcon_MouseDown_1" MouseEnter="PackIcon_MouseEnter_1" MouseLeave="PackIcon_MouseLeave"/>
+                    <materialDesign:PackIcon Kind="WindowClose" Foreground="#ffffff" x:Name="X"
+                                             Opacity="0.6" Margin="0 0 10 0" MouseDown="PackIcon_MouseDown" MouseEnter="PackIcon_MouseEnter" MouseLeave="X_MouseLeave"/>
+                    
+                </StackPanel>
+        </Border>
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Border CornerRadius="0 0 10 0" Background="#282828" BorderThickness="0 0.0 0.3 0.3"
+                BorderBrush="AliceBlue" Grid.Row="1">
+                <Grid>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <TextBlock Text="Добро пожаловать " FontSize="30" FontFamily="Arial Black"
+                               Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Вы вошли в аккаунт" FontSize="35" FontFamily="Arial Black"
+                               Foreground="#FFBE5D" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <materialDesign:PackIcon Kind="Gym" Width="100" Height="100" HorizontalAlignment="Center"
+                                                 Foreground="AliceBlue" Margin="0 10 0 0"/>
+                    </StackPanel>
+                    
+                    <Frame Background="Transparent" x:Name="FrameNews" NavigationUIVisibility="Hidden" Visibility="Hidden"/>
+                    <Frame Background="Transparent" x:Name="FramePrice" NavigationUIVisibility="Hidden" Visibility="Hidden"/>
+                    <Frame Background="Transparent" x:Name="FrameGym" NavigationUIVisibility="Hidden" Visibility="Hidden"/>
+                    <Frame Background="Transparent" x:Name="FrameSetting" NavigationUIVisibility="Hidden" Visibility="Hidden" />
+                </Grid>
+            </Border>
+            
+        </Grid>
+
+    </Grid>
+
+</Window>
